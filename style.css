@@ -1,0 +1,229 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500&display=swap');
+
+*{
+    margin: 2px;
+    padding: 2px;
+    box-sizing: border-box;
+}
+
+body{
+    background: linear-gradient(300deg, #acd5e6, #e77b96, #cee07a);
+}
+
+.board{
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    align-items: center;
+    transition: all 0.2 ease;
+}
+
+.box{
+    top: 35%;
+    left: 38%;
+    position: absolute;
+    align-items: center;
+    align-items: center;
+    background: whitesmoke;
+    padding: 22px;
+    border-radius: 7px;
+    width: 350px;
+    box-shadow: 10px 10px 10px rgb(124, 115, 115);
+    transition: all 0.2s ease;
+    /*display: none;*/
+}
+
+.box.hide{
+    opacity: 0;
+    pointer-events: none;
+    transform: translate(-50%,-50%) scale(0.8);
+}
+
+.box header{
+    font-size: larger;
+    font-weight: 700;
+    padding-bottom: 5px;
+    text-align: center;
+}
+
+.box .title{
+    font-size: large;
+    font-weight: 400;
+    margin: 15px 0;
+    text-align: center;
+}
+
+.box .choose{
+    display: flex;
+    width: 100%;
+}
+
+.choose button{
+    font-size: medium;
+    font-weight: 400;
+    padding: 5px;
+    outline: none;
+    color: whitesmoke;
+    background: #e77b96;
+    cursor: pointer;
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    transition: all 0.2s ease;
+}
+
+.choose button:hover, .result .butn button:hover{
+    transform: scale(0.9);
+    background: #cee07a;
+}
+
+.choose button play1{
+    margin-right: 3px;
+}
+
+.choose button play2{
+    margin-left: 3px;
+}
+
+.board{
+    opacity: 0;
+    pointer-events: none;
+    transform: translate(-50%,-50%) scale(0.8);
+}
+
+.board.show{
+    opacity: 1;
+    pointer-events: auto;
+    transform: translate(-50%,-50%) scale(1);
+}
+
+.board .feature{
+    background: whitesmoke;
+    padding: 7px;
+    border-radius: 5px;
+}
+
+.board .feature .players{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    position: relative;
+    text-align: center;
+}
+
+.players.active span:first-child{
+    color: #acd5e6;
+}
+
+.players.active span:nth-child(2){
+    color: whitesmoke;
+}
+
+.players.active .slide{
+    left: 50%;
+}
+
+.board .feature span{
+    color: #acd5e6;
+    width: 100%;
+    border-radius: 5px;
+    padding: 5px 0;
+    font-size: large;
+    font-weight: 400;
+    cursor: default;
+    position: relative;
+    z-index: 5;
+    transition: all 0.2s ease;
+}
+
+.feature span:first-child{
+    color: whitesmoke;
+}
+
+.feature .slide{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 50%;
+    background: #acd5e6;
+    border-radius: 7px;
+    z-index: 3;
+    transition: all 0.2s ease;
+}
+
+.board .area{
+    margin-top: 22px;
+}
+
+.board section{
+    display: flex;
+}
+
+.board section span{
+    display: block;
+    margin: 5px;
+    height: 80px;
+    width: 80px;
+    background: whitesmoke;
+    border-radius: 5px;
+    font-size: 45px;
+    text-align: center;
+    line-height: 85px;
+    color: #acd5e6;
+}
+
+.result{
+    position: absolute;
+    align-items: center;
+    top: 50%;
+    left: 50%;
+    background: whitesmoke;
+    padding: 20px;
+    border-radius: 7px;
+    max-width: 350px;
+    width: 100%;
+    box-shadow: 10px 10px 10px rgb(124, 115, 115);
+    /*display: none;*/
+    transition: all 0.2 ease;
+    opacity: 0;
+    pointer-events: none;
+    transform: translate(-50%, -50%) scale(0.8);
+}
+
+.result.show{
+    opacity: 1;
+    pointer-events: auto;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.result .won{
+    font-size: 28px;
+    font-weight: 400;
+    display: flex;
+    justify-content: center;
+}
+
+.result .won p{
+    font-weight: 700;
+    margin: 0 3px;
+}
+
+.result .butn{
+    display: flex;
+    margin-top: 22px;
+    justify-content: center;
+}
+
+.result .butn button{
+    font-size: medium;
+    font-weight: 400;
+    padding: 7px 20px;
+    outline: none;
+    color: whitesmoke;
+    background: #e77b96;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    transition: all 0.2s ease;
+}
